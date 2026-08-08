@@ -1,0 +1,32 @@
+# Data and model artifacts — never commit these
+data/
+artifacts/
+*.keras
+*.h5
+*.weights.h5
+*.joblib
+*.npz
+*.npy
+
+# Credentials
+kaggle.json
+.env
+
+# Notebooks: strip outputs before committing (see docs/contributing.md)
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
