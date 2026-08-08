@@ -1,21 +1,36 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-st.title("Plant Recognition")
-st.sidebar.title("Table of contents")
-pages=["Problem", "Data Exploration", "Preprocessing", "Modelling", "Interpretability"]
-page=st.sidebar.radio("Go to", pages)
+from config import PRESENTATION_TITLE, SECTION_ORDER
+from theme import apply_theme
+from components import render_sidebar
+from sections import (
+    problem,
+    exploration,
+    preprocessing,
+    modeling,
+    interpretability,
+)
 
-if page == pages[0]:
-  st.write("Problem")
-if page == pages[1]:
-  st.write("Data Exploration")
-if page == pages[2]:
-  st.write("Preprocessing")
-if page == pages[3]:
-  st.write("Modelling")
-if page == pages[4]:
-  st.write("Interpretability")
+st.set_page_config(
+    page_title=PRESENTATION_TITLE,
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+apply_theme()
+
+sections = {
+    "1. Business Problem / Introduction": problem.render,
+    "2. Data Exploration": exploration.render,
+    "3. Preprocessing": preprocessing.render,
+    "4. Modeling": modeling.render,
+    "5. Interpretability": interpretability.render,
+}
+
+selected_section = render_sidebar(SECTION_ORDER)
+
+st.title(PRESENTATION_TITLE)
+st.divider()
+
+sections[selected_section]()
