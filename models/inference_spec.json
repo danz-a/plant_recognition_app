@@ -1,0 +1,13 @@
+{
+  "model_file": "densenet121_inference.keras",
+  "img_size": 128,
+  "input_convention": "float32, raw 0-255, RGB, (128,128,3); preprocessing lives INSIDE the model graph",
+  "class_order": "sorted() over the 38 color/ class folder names == class_names.json",
+  "n_classes": 38,
+  "verified_on": "first 256 rows of split_val.csv",
+  "verified_accuracy": 0.9961,
+  "split_id": "9e33ec57c1ec",
+  "source_checkpoint_md5": "afe3478450c41d91a6ac1e57a2ada44d",
+  "tensorflow": "2.20.0",
+  "keras": "3.13.2"
+}
