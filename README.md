@@ -1,7 +1,7 @@
 # Plant Recognition — Leaf Disease Classification
 
 Capstone project · DataScientest / Liora · Cohort `may26bds_int`
-**Team:** Adrian · Alexander Danz · Christoph · Scheima — **Mentor:** Habiba El Husseiny
+**Team:** Adrian Bogdan RUS· Alexander DANZ · Christoph Clemens Martin NEDDENS · Scheima Sara OBEIDI — **Mentor:** Habiba El Husseiny
 **Defence:** 1 September 2026
 
 ## The problem
