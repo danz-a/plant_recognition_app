@@ -1,0 +1,10 @@
+# MD5 checksums — model provenance
+# Verify with:  md5sum -c MD5SUMS.txt   (run inside models/)
+
+# Reference (NOT in repo — canonical training checkpoint, lives in Drive):
+# afe3478450c41d91a6ac1e57a2ada44d  densenet121.keras  (81.2 MB, full training checkpoint)
+
+# TODO — fill in from the export notebook output:
+# <md5-from-export-notebook>  densenet121_inference.keras
+# <md5-from-export-notebook>  scratch_cnn.keras
+# <md5-from-export-notebook>  class_names.json

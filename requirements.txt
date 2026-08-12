@@ -1,5 +1,13 @@
-streamlit
-pandas
+# Single requirements file for the whole repo — Streamlit Cloud reads THIS file
+# (the one at repo root). Do not keep a second requirements.txt in streamlit/.
+#
+# TODO (Christoph, after the export notebook run): replace the tensorflow line
+# with the exact version the notebook prints, e.g.  tensorflow-cpu==2.19.0
+# The TF version MUST match the environment that saved densenet121_inference.keras.
+
+tensorflow-cpu        # <-- pin after export notebook run
+streamlit>=1.36
+pillow
 numpy
+pandas
 matplotlib
-seaborn
