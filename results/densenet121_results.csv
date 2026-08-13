@@ -1,0 +1,2 @@
+model,split_id,val_macro_F1,val_accuracy,min_per_class_recall,params_total,params_trainable_phase2,img_size,batch_size,epochs_phase1,epochs_phase2,val_images,smoke_test
+"DenseNet-121 (ImageNet, fine-tuned)",9e33ec57c1ec,0.9918,0.9931,0.9481,7076454,6909158,128,32,5,19,8146,False

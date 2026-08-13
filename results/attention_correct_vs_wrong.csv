@@ -1,0 +1,5 @@
+model,metric,n_correct,n_wrong,mean_correct,mean_wrong,difference,ci_lo,ci_hi,mannwhitney_p,welch_p,rank_biserial,mw_significant_0.025,ci_excludes_zero,verdict
+Scratch CNN,concentration,7777,190,1.2286,1.1275,0.1011,0.0083,0.1892,3.192490157340866e-05,0.034814599507273204,0.1763,True,True,supported
+Scratch CNN,concentration_matched,7777,190,1.1708,1.0795,0.0913,0.0314,0.1488,4.3922295255981166e-06,0.0037768150671343764,0.1947,True,True,supported
+DenseNet-121,concentration,7911,56,1.1493,1.0151,0.1342,0.0456,0.2263,0.002699644936801866,0.006304844310646453,0.2323,True,True,supported
+DenseNet-121,concentration_matched,7911,56,1.1353,1.0093,0.126,0.0527,0.2032,0.0007131246661224609,0.002114330296843941,0.2621,True,True,supported

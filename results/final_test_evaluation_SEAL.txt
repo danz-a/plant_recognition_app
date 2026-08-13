@@ -1,0 +1,18 @@
+DELIVERABLE 2 - SINGLE SEALED-TEST EVALUATION
+============================================================
+run at         : 2026-07-28 14:24
+model          : DenseNet-121 (ImageNet, fine-tuned)
+checkpoint     : /content/drive/MyDrive/plant_recognition/deliverable2/02_models/densenet121.keras
+checkpoint md5 : afe3478450c41d91a6ac1e57a2ada44d
+checkpoint size: 85195269 bytes
+split_id       : 9e33ec57c1ec
+test images    : 8146
+
+test macro-F1  : 0.9919   95% CI [0.9896, 0.9941]
+test accuracy  : 0.9930
+min class recall: 0.9481 (Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot)
+val macro-F1   : 0.9918  [dry run on this exact checkpoint (same session)]
+gap (test-val) : +0.0001
+
+The test set is now SPENT. Scoring a second model on it, or re-scoring this one
+after any change, invalidates it as a held-out estimate and must not be done.

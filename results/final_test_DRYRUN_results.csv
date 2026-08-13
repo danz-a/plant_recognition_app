@@ -1,0 +1,2 @@
+model,evaluation,split_id,split_scored,n_images,macro_f1,macro_f1_ci_low,macro_f1_ci_high,accuracy,n_errors,min_per_class_recall,worst_class,val_macro_f1,val_macro_f1_source,gap_test_minus_val,model_md5,model_bytes,img_size,batch_size,n_confusion_pairs,dry_run,timestamp
+"DenseNet-121 (ImageNet, fine-tuned)",validation (dry run),9e33ec57c1ec,val,8146,0.9918,0.9892,0.994,0.9931,56,0.9481,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,0.9918,densenet121_results.csv (recorded validation run),-0.0,afe3478450c41d91a6ac1e57a2ada44d,85195269,128,32,29,True,2026-07-28 14:05

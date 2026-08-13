@@ -1,0 +1,2 @@
+model,val_macro_F1,val_accuracy,expected
+Baseline CNN,0.973,0.977,0.979
