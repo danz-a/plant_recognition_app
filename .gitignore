@@ -1,1 +1,22 @@
-models/
+# ── Dataset: never committed ─────────────────────────────────────────
+# (data/samples/ and data/README.md ARE committed — they are not matched below)
+data/PlantVillage/
+data/plantvillage/
+data/PlantVillage_38/
+
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ── OS / editor noise ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Big or regenerable artefacts ─────────────────────────────────────
+*.h5
+*.zip
+# NOTE: models/*.keras are committed DELIBERATELY (inference model ~30 MB,
+# scratch CNN 3 MB). Do not add *.keras here.

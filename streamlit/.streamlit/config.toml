@@ -1,0 +1,57 @@
+[theme]
+base = "light"
+
+# --- Farben ------------------------------------------------------------------
+primaryColor              = "#2F6B4E"   # Herbargrün: Fokus, Auswahl, Buttons
+backgroundColor           = "#E9EBE6"   # Studiograu
+secondaryBackgroundColor  = "#F3F4F0"   # Karten, Codeblöcke, Widget-Flächen
+textColor                 = "#14211B"   # Tiefes Grünschwarz statt Reinschwarz
+linkColor                 = "#2F6B4E"
+borderColor               = "#C6CBC2"
+dataframeBorderColor      = "#C6CBC2"
+dataframeHeaderBackgroundColor = "#E4E7E0"
+showWidgetBorder          = true
+
+# --- Farbpalette -------------------------------------------------------------
+# Diese Namen benutzen st.success, st.warning, st.error, st.badge und farbiges
+# Markdown. Sie hier zu belegen heißt: auch eine Warnmeldung sieht nach diesem
+# Projekt aus und nicht nach Streamlit-Standard.
+greenColor  = "#2F6B4E"   # bestätigte Befunde
+orangeColor = "#C08A2E"   # Vorbehalte, offene Punkte
+redColor    = "#7A3B2A"   # Läsionsbraun: Fehler, Grenzen
+grayColor   = "#6B7670"   # Nebentext, Bildunterschriften
+blueColor   = "#3A5A78"
+
+# --- Schrift -----------------------------------------------------------------
+# Format ist "<Schriftname>:<CSS-URL>". Serife Überschriften mit Charakter,
+# ruhige Grotesk im Fließtext, Mono für alles Zahlenhafte.
+font = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&display=swap"
+headingFont = "Spectral:https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&display=swap"
+codeFont = "IBM Plex Mono:https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+
+baseFontSize = 16
+headingFontSizes = ["2.35rem", "1.5rem", "1.14rem", "1rem", "0.9rem", "0.8rem"]
+headingFontWeights = [600, 600, 600]
+
+# --- Form --------------------------------------------------------------------
+baseRadius = "small"      # Präparatetiketten sind eckig, nicht abgerundet
+buttonRadius = "small"
+
+# --- Diagrammfarben ----------------------------------------------------------
+# Gilt für Plotly, Altair und Vega-Lite. Matplotlib-Plots müssen die Farben
+# selbst setzen — dafür gibt es theme.mpl_style() in lib/theme.py.
+chartCategoricalColors = ["#2F6B4E", "#7A3B2A", "#C08A2E", "#3A5A78", "#6B7670"]
+
+# --- Sidebar -----------------------------------------------------------------
+[theme.sidebar]
+backgroundColor = "#F3F4F0"
+secondaryBackgroundColor = "#E9EBE6"
+borderColor = "#C6CBC2"
+baseRadius = "small"
+
+# =============================================================================
+[server]
+maxUploadSize = 10
+
+[browser]
+gatherUsageStats = false

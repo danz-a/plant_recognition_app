@@ -1,0 +1,7 @@
+# canonical split fingerprint - plant_recognition / deliverable2
+# seed=42  split=(0.7, 0.15, 0.15)  stratified, file-level
+# rows=54305  classes=38  written=2026-08-13 09:06
+split_train.csv  rows=38,013  md5=7d083aaec519a8d188f5b2349ea27b06
+split_val.csv  rows= 8,146  md5=611d00bb5835e052b177d58de357d0af
+split_test.csv  rows= 8,146  md5=6ee6c1b7fd1df3942357a5460188848c
+SPLIT_ID = 9e33ec57c1ec

@@ -1,0 +1,16 @@
+{
+  "img_size": 128,
+  "seed": 42,
+  "smoke_test": false,
+  "val_fingerprint": "6fee7f101af7",
+  "n_quant": 7967,
+  "models": {
+    "Baseline CNN": {
+      "path": "/content/drive/MyDrive/plant_recognition/baseline_cnn.keras",
+      "grid": [
+        16,
+        16
+      ]
+    }
+  }
+}

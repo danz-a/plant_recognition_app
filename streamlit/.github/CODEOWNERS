@@ -1,0 +1,34 @@
+# Wer darf was ändern.
+#
+# GitHub fordert bei einem Pull Request automatisch das Review der hier
+# genannten Person an. Das ersetzt keine Absprache, aber es macht sichtbar,
+# wenn jemand in einem fremden Abschnitt landet.
+#
+# GitHub-Handles eintragen, nicht Klarnamen.
+
+# --- Abschnitte: jeweils eine Person -----------------------------------------
+/parts/part1_problem.py           @
+/data/part1/                      @
+/assets/part1/                    @
+
+/parts/part2_exploration.py       @
+/data/part2/                      @
+/assets/part2/                    @
+
+/parts/part3_preprocessing.py     @
+/data/part3/                      @
+/assets/part3/                    @
+
+/parts/part4_modelling.py         @
+/data/part4/                      @
+/assets/part4/                    @
+
+/parts/part5_interpretability.py  @
+/data/part5/                      @
+/assets/part5/                    @
+
+# --- Gemeinsames: Änderung nur nach Absprache --------------------------------
+/app.py                           @
+/lib/                             @
+/.streamlit/                      @
+/data/shared/                     @

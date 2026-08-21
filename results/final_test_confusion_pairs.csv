@@ -1,0 +1,32 @@
+true_class,predicted_class,count,pct_of_true_class,pct_of_all_errors,reverse_count
+Tomato___Spider_mites Two-spotted_spider_mite,Tomato___Target_Spot,9,3.59,15.79,0
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato___Bacterial_spot,8,1.0,14.04,0
+Tomato___Late_blight,Potato___Late_blight,5,1.75,8.77,1
+Tomato___Late_blight,Tomato___Early_blight,4,1.4,7.02,0
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,Corn_(maize)___Northern_Leaf_Blight,4,5.19,7.02,1
+Tomato___Early_blight,Tomato___Bacterial_spot,2,1.33,3.51,0
+Apple___healthy,Apple___Apple_scab,1,0.4,1.75,1
+Peach___Bacterial_spot,Apple___Cedar_apple_rust,1,0.29,1.75,0
+Peach___Bacterial_spot,Peach___healthy,1,0.29,1.75,0
+"Pepper,_bell___healthy","Pepper,_bell___Bacterial_spot",1,0.45,1.75,0
+Apple___Apple_scab,Apple___healthy,1,1.06,1.75,1
+Cherry_(including_sour)___Powdery_mildew,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,1,0.63,1.75,0
+Corn_(maize)___Northern_Leaf_Blight,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,1,0.68,1.75,4
+Grape___Black_rot,Grape___Esca_(Black_Measles),1,0.56,1.75,0
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot),Strawberry___Leaf_scorch,1,0.62,1.75,0
+Soybean___healthy,Tomato___healthy,1,0.13,1.75,0
+Soybean___healthy,Peach___healthy,1,0.13,1.75,0
+Soybean___healthy,Apple___healthy,1,0.13,1.75,0
+Potato___Late_blight,Tomato___Late_blight,1,0.67,1.75,5
+Potato___Late_blight,Potato___Early_blight,1,0.67,1.75,0
+Tomato___Bacterial_spot,Tomato___Target_Spot,1,0.31,1.75,0
+Tomato___Early_blight,Tomato___Target_Spot,1,0.67,1.75,1
+Tomato___Bacterial_spot,"Pepper,_bell___Bacterial_spot",1,0.31,1.75,0
+Tomato___Late_blight,Tomato___Leaf_Mold,1,0.35,1.75,0
+Tomato___Late_blight,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,1,0.35,1.75,0
+Tomato___Septoria_leaf_spot,Tomato___Early_blight,1,0.38,1.75,0
+Tomato___Late_blight,Tomato___healthy,1,0.35,1.75,0
+Tomato___Septoria_leaf_spot,Tomato___Leaf_Mold,1,0.38,1.75,0
+Tomato___Target_Spot,Tomato___Early_blight,1,0.47,1.75,1
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato___Spider_mites Two-spotted_spider_mite,1,0.12,1.75,0
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomato___Target_Spot,1,0.12,1.75,0
