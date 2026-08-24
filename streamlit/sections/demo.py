@@ -8,6 +8,7 @@ import streamlit as st
 from PIL import Image
 
 from components import section_header
+from gradcam_utils import gradcam_overlay
 from model_utils import list_samples, load_bundle, predict, pretty
 
 
@@ -15,6 +16,18 @@ def _show_prediction(image, true_cls=None):
     col_img, col_res = st.columns([1, 1.4])
     with col_img:
         st.image(image, use_container_width=True)
+        cam = gradcam_overlay(image)
+        if cam is not None:
+            overlay, _, _ = cam
+            st.image(
+                overlay,
+                caption="Grad-CAM - where the model looked (heat = evidence "
+                        "for the predicted class; 4x4 grid, upsampled)",
+                use_container_width=True,
+            )
+        else:
+            st.caption("Grad-CAM unavailable for this image - "
+                       "the prediction above is unaffected.")
     with col_res:
         results = predict(image, top_k=3)
         top_cls, top_p = results[0]
