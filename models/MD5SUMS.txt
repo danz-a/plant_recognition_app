@@ -8,3 +8,7 @@
 313b850980f6eb767623555cd53a2138  class_names.json
 0d72838f18b867eadec9f877322af8d2  inference_spec.json
 3f9c5e86266b540e4c0596c8bac09ad2  scratch_cnn.keras
+d1a15c8ea22d5259249cf168aba99c2f  logreg_global6.joblib
+03e437faab934ba33ca06c409dcfe6d4  rf_global6_demo.joblib
+e69565ebbbdb12705021913350196a64  rf160_demo.joblib
+81db06e99619c2dc054774f76e6125e5  classical_spec.json

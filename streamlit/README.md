@@ -1,123 +1,28 @@
-# Streamlit Presentation Project
+# Streamlit demo
 
-This is a minimal Streamlit project designed for a four-person machine learning presentation.
-
-## Project structure
+One page: a leaf goes in, five models predict - weakest first.
 
 ```text
-presentation_streamlit/
-├── app.py
-├── config.py
-├── theme.py
-├── components.py
-├── requirements.txt
-├── README.md
-├── assets/
-└── sections/
-    ├── __init__.py
-    ├── problem.py
-    ├── exploration.py
-    ├── preprocessing.py
-    ├── modeling.py
-    └── interpretability.py
+streamlit/
+├── app.py            entry point (no navigation - the demo is the app)
+├── config.py         title + the model ladder (names, what each model sees, val macro-F1 of the CNNs)
+├── theme.py          colours / CSS
+├── components.py     section header
+├── model_utils.py    cached, MD5-verified loaders for all five models + predict_all()
+├── features.py       the 6-number and 160-number classical feature extractors (Step 3.1 code, unchanged)
+├── gradcam_utils.py  live Grad-CAM for DenseNet-121
+└── sections/demo.py  the page
 ```
 
-## Division of work
+Models (all in `../models/`, listed in `MD5SUMS.txt`):
 
-The presentation is divided into five independent sections:
+| key | file | produced by |
+|---|---|---|
+| logreg | `logreg_global6.joblib` | notebook 14 (exact Step 3.1 recipe) |
+| rf6 | `rf_global6_demo.joblib` | notebook 14 (demo copy, size-capped) |
+| rf160 | `rf160_demo.joblib` | notebook 14 (demo copy, size-capped) |
+| scratch | `scratch_cnn.keras` | notebook 04 |
+| densenet | `densenet121_inference.keras` | notebook 13 |
 
-1. Business Problem / Introduction
-2. Data Exploration
-3. Preprocessing
-4. Modeling
-5. Interpretability
-
-Each section has its own Python file in `sections/`.
-
-This allows different team members to work independently without normally editing the same file.
-
-## Central design
-
-The visual design is controlled centrally in:
-
-```text
-theme.py
-```
-
-Shared UI components are controlled in:
-
-```text
-components.py
-```
-
-General project settings and navigation order are controlled in:
-
-```text
-config.py
-```
-
-A team member working on an individual section should normally only need to edit the corresponding file in `sections/`.
-
-## Installation
-
-Create and activate a virtual environment:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Install the dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Run the application
-
-```bash
-streamlit run app.py
-```
-
-The application will open in the browser.
-
-## Adding graphs
-
-Graphs can be added directly to the relevant section.
-
-For example:
-
-```python
-st.line_chart(data)
-```
-
-or with Matplotlib:
-
-```python
-import matplotlib.pyplot as plt
-
-fig, ax = plt.subplots()
-ax.plot(x, y)
-st.pyplot(fig)
-```
-
-Additional Python packages can be added to `requirements.txt` if required.
-
-## Recommended Git workflow
-
-Each team member can work primarily on their assigned section:
-
-```text
-Person 1 → sections/problem.py
-Person 2 → sections/exploration.py
-Person 3 → sections/preprocessing.py
-Person 4 → sections/modeling.py
-```
-
-`interpretability.py` can be assigned to one of the four members or developed jointly.
-
-Central design changes should be made in `theme.py`, ideally by agreement of the team to avoid merge conflicts.
-
-## Important
-
-The current content is intentionally only a placeholder. The project does not contain the actual dataset, models, or Grad-CAM implementation yet.
+Nothing is trained or downloaded at runtime. Run locally with
+`pip install -r ../requirements.txt` then `streamlit run app.py`.
