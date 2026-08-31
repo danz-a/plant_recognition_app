@@ -1,0 +1,62 @@
+{
+  "split_id": "9e33ec57c1ec",
+  "sklearn": "1.6.1",
+  "scikit_image": "0.25.2",
+  "global6": {
+    "columns": [
+      "file_size_kb",
+      "brightness",
+      "mean_R",
+      "mean_G",
+      "mean_B",
+      "green_frac"
+    ],
+    "note": "full-resolution image; file_size_kb = true file size in KB"
+  },
+  "feat160": {
+    "feat_size": 64,
+    "rgb_bins": 32,
+    "hsv_bins": 16,
+    "glcm_levels": 32,
+    "glcm_dist": [
+      1,
+      2
+    ],
+    "glcm_props": [
+      "contrast",
+      "dissimilarity",
+      "homogeneity",
+      "energy",
+      "correlation"
+    ],
+    "n_features": 160,
+    "note": "histograms + GLCM on a 64x64 copy; the 6 global numbers on the full image"
+  },
+  "models": {
+    "logreg": {
+      "file": "logreg_global6.joblib",
+      "features": "global6",
+      "recipe": "Step 3.1 exact: 300/class train sample, StandardScaler, LogisticRegression(balanced)",
+      "val_macro_f1": 0.2739,
+      "val_accuracy": 0.3285,
+      "report_val_macro_f1": 0.274
+    },
+    "rf6": {
+      "file": "rf_global6_demo.joblib",
+      "features": "global6",
+      "recipe": "demo copy: 100 trees, max_leaf_nodes=1000, balanced, full train split (report: 300 fully-grown trees)",
+      "val_macro_f1": 0.3796,
+      "val_accuracy": 0.4567,
+      "report_val_macro_f1": 0.382
+    },
+    "rf160": {
+      "file": "rf160_demo.joblib",
+      "features": "feat160",
+      "recipe": "demo copy: 100 trees, max_leaf_nodes=1000, balanced, full train split (report: 300 fully-grown trees)",
+      "val_macro_f1": 0.8592,
+      "val_accuracy": 0.8844,
+      "report_val_macro_f1": 0.906
+    }
+  },
+  "smoke_test": false
+}
