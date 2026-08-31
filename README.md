@@ -32,8 +32,9 @@ The dataset was split 70/15/15 (stratified, seed 42) **once**, before any modell
 ├── results/     Metrics, classification reports, confusion data, run logs
 ├── figures/     All generated figures
 ├── reports/     Deliverable 1, Deliverable 2, Final Report (PDF)
-└── streamlit/   The presentation & demo app
+└── streamlit/   └── streamlit/   Live demo — five models + Grad-CAM on one leaf
 ```
+Notebooks are numbered in pipeline order; the numbering skips 10.
 
 ## Running the app locally
 
@@ -44,7 +45,7 @@ pip install -r requirements.txt
 streamlit run streamlit/app.py
 ```
 
-The app loads the committed inference model from `models/` — no downloads, no training at runtime.
+The app loads all five committed models from  `models/` — (MD5-verified on start)
 
 ## Getting the data
 
