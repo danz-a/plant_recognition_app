@@ -81,7 +81,8 @@ def _show(image, file_size_kb, which, true_cls=None):
         names = {r["key"]: r["name"] for r in rows}
         default = "densenet" if "densenet" in names else rows[-1]["key"]
         focus = st.selectbox("Top-3 of", list(names), index=list(names).index(default),
-                             format_func=names.get)
+                             format_func=names.get,
+                             key="top3_upload" if true_cls is None else "top3_sample")
         for cls, p in next(r for r in rows if r["key"] == focus)["top3"]:
             st.progress(min(max(p, 0.0), 1.0), text=f"{pretty(cls)} - {p:.1%}")
 
